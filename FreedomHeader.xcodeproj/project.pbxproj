@@ -26,6 +26,9 @@
 		6BD3B0AB20C7759F007B8AD0 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD3B09F20C7759F007B8AD0 /* MASViewConstraint.m */; };
 		6BD3B0AC20C7759F007B8AD0 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD3B0A020C7759F007B8AD0 /* MASViewAttribute.m */; };
 		6BD3B0AD20C7759F007B8AD0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6BD3B0A120C7759F007B8AD0 /* README.md */; };
+		6BD3B0C920C7DCB7007B8AD0 /* license in Resources */ = {isa = PBXBuildFile; fileRef = 6BD3B0C220C7DCB7007B8AD0 /* license */; };
+		6BD3B0CA20C7DCB7007B8AD0 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD3B0C520C7DCB7007B8AD0 /* UIView+Toast.m */; };
+		6BD3B0CB20C7DCB7007B8AD0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6BD3B0C620C7DCB7007B8AD0 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +71,11 @@
 		6BD3B09F20C7759F007B8AD0 /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
 		6BD3B0A020C7759F007B8AD0 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
 		6BD3B0A120C7759F007B8AD0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		6BD3B0C220C7DCB7007B8AD0 /* license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = license; sourceTree = "<group>"; };
+		6BD3B0C420C7DCB7007B8AD0 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
+		6BD3B0C520C7DCB7007B8AD0 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
+		6BD3B0C620C7DCB7007B8AD0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		6BD3B0C820C7DCB7007B8AD0 /* Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Toast.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +92,7 @@
 		6BD3B06020C773B3007B8AD0 = {
 			isa = PBXGroup;
 			children = (
+				6BD3B0C120C7DCB7007B8AD0 /* Toast */,
 				6BD3B08520C7759F007B8AD0 /* Masonry */,
 				6BD3B06B20C773B3007B8AD0 /* FreedomHeader */,
 				6BD3B06A20C773B3007B8AD0 /* Products */,
@@ -158,6 +167,34 @@
 			path = Masonry;
 			sourceTree = "<group>";
 		};
+		6BD3B0C120C7DCB7007B8AD0 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				6BD3B0C220C7DCB7007B8AD0 /* license */,
+				6BD3B0C320C7DCB7007B8AD0 /* Toast */,
+				6BD3B0C620C7DCB7007B8AD0 /* README.md */,
+				6BD3B0C720C7DCB7007B8AD0 /* Toast-Framework */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
+		6BD3B0C320C7DCB7007B8AD0 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				6BD3B0C420C7DCB7007B8AD0 /* UIView+Toast.h */,
+				6BD3B0C520C7DCB7007B8AD0 /* UIView+Toast.m */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
+		6BD3B0C720C7DCB7007B8AD0 /* Toast-Framework */ = {
+			isa = PBXGroup;
+			children = (
+				6BD3B0C820C7DCB7007B8AD0 /* Toast.h */,
+			);
+			path = "Toast-Framework";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -216,8 +253,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BD3B0C920C7DCB7007B8AD0 /* license in Resources */,
 				6BD3B07920C773B3007B8AD0 /* LaunchScreen.storyboard in Resources */,
 				6BD3B07620C773B3007B8AD0 /* Assets.xcassets in Resources */,
+				6BD3B0CB20C7DCB7007B8AD0 /* README.md in Resources */,
 				6BD3B0AD20C7759F007B8AD0 /* README.md in Resources */,
 				6BD3B0A220C7759F007B8AD0 /* LICENSE in Resources */,
 				6BD3B07420C773B3007B8AD0 /* Main.storyboard in Resources */,
@@ -234,6 +273,7 @@
 				6BD3B0AB20C7759F007B8AD0 /* MASViewConstraint.m in Sources */,
 				6BD3B0AC20C7759F007B8AD0 /* MASViewAttribute.m in Sources */,
 				6BD3B07120C773B3007B8AD0 /* ViewController.m in Sources */,
+				6BD3B0CA20C7DCB7007B8AD0 /* UIView+Toast.m in Sources */,
 				6BD3B07C20C773B3007B8AD0 /* main.m in Sources */,
 				6BD3B0A820C7759F007B8AD0 /* NSArray+MASAdditions.m in Sources */,
 				6BD3B0A420C7759F007B8AD0 /* ViewController+MASAdditions.m in Sources */,
