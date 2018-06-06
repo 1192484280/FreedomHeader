@@ -13,11 +13,21 @@
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (strong, nonatomic) UITableView *tableView;
+@property (strong, nonatomic) HeaderView *headerView;
 
 @end
 
 @implementation ViewController
 
+- (HeaderView *)headerView{
+    
+    if (!_headerView) {
+        
+        _headerView = [[HeaderView alloc] init];
+    }
+    
+    return _headerView;
+}
 
 - (UITableView *)tableView{
     
@@ -26,10 +36,8 @@
         _tableView = [UITableView new];
         _tableView.delegate = self;
         _tableView.dataSource = self;
-    
-        HeaderView *headerView = [[HeaderView alloc] init];
-        _tableView.tableHeaderView = headerView;
-        [headerView mas_makeConstraints:^(MASConstraintMaker *make) {
+        _tableView.tableHeaderView = self.headerView;
+        [self.headerView mas_makeConstraints:^(MASConstraintMaker *make) {
            
             make.width.mas_equalTo(self.view.frame.size.width);
         }];
@@ -45,6 +53,11 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
     return 5;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return 60;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -85,6 +98,19 @@
     }];
     
     [self.tableView layoutIfNeeded];
+    
+    
+    //模拟请求数据
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        [self.headerView setDes:@"过放荡不羁的生活，容易得像顺水推舟，但是要结识良朋益友，却难如登天。 —— 巴尔扎克"];
+        
+        [self.tableView beginUpdates];
+        [self.tableView setTableHeaderView:self.headerView];
+        [self.tableView layoutIfNeeded];
+        [self.tableView endUpdates];
+        
+    });
 }
 
 

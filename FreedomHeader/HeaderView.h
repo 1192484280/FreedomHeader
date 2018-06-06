@@ -10,4 +10,6 @@
 
 @interface HeaderView : UIView
 
+- (void)setDes:(NSString *)des;
+
 @end
