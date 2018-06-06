@@ -92,8 +92,7 @@
 		6BD3B06020C773B3007B8AD0 = {
 			isa = PBXGroup;
 			children = (
-				6BD3B0C120C7DCB7007B8AD0 /* Toast */,
-				6BD3B08520C7759F007B8AD0 /* Masonry */,
+				6BD3B0CC20C7E0D1007B8AD0 /* ThirdLib */,
 				6BD3B06B20C773B3007B8AD0 /* FreedomHeader */,
 				6BD3B06A20C773B3007B8AD0 /* Products */,
 			);
@@ -193,6 +192,15 @@
 				6BD3B0C820C7DCB7007B8AD0 /* Toast.h */,
 			);
 			path = "Toast-Framework";
+			sourceTree = "<group>";
+		};
+		6BD3B0CC20C7E0D1007B8AD0 /* ThirdLib */ = {
+			isa = PBXGroup;
+			children = (
+				6BD3B0C120C7DCB7007B8AD0 /* Toast */,
+				6BD3B08520C7759F007B8AD0 /* Masonry */,
+			);
+			path = ThirdLib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
